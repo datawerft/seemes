@@ -1,17 +1,33 @@
 class SeemesAdmin::PagesController < SeemesAdmin::BaseController
 
-  layout 'admin'
+  layout Seemes.config.admin_layout
+
+  before_filter :all_pages, :only => [:index, :edit]
 
   def index
-
   end
 
   def new
     @page = Seemes::Page.new
-    @page.title = 'hello World'
+  end
 
-    #@page.save
+  def create
 
+  end
+
+  def edit
+    @page = Seemes::Page.find(params[:id])
+
+  end
+
+  def update
+
+  end
+
+  protected
+
+  def all_pages
+    @seemes_pages = Seemes::Page.asc(:title)
   end
 
 end
