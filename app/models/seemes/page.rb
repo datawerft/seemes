@@ -1,8 +1,13 @@
 module Seemes
   class Page
     include Mongoid::Document
+    include Mongoid::Timestamps
 
-    field :title, type: String
+    field :human_id,  type: String
+    field :title,     type: String
+    field :content,   type: String
     
+    
+
   end
 end

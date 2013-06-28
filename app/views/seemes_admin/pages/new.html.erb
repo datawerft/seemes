@@ -1,5 +1,5 @@
 
 <%= form_for @page, url: seemes_admin_pages_path do |f| %>
-  <%= f.text_field :title %>
-
+  <%= render partial: 'form_fields', locals: { f: f } %>
+  <%= f.submit :save, :class => 'btn' %>
 <% end %>
