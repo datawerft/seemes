@@ -1,0 +1,5 @@
+<h1><%= @snippet.title %></h1>
+<%= form_for @snippet, url: seemes_admin_snippet_path do |f| %>
+  <%= render partial: 'form_fields', :locals => { :f => f } %>
+  <%= f.submit :save %>
+<% end %>

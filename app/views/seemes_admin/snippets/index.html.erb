@@ -1,0 +1,14 @@
+<h1>List of all Snippets</h1>
+
+<%= link_to 'Create Snippet', new_seemes_admin_snippet_path %>
+
+<table>
+  <tr><th>Title</th><th>Content</th><th>Actions</th></tr>
+  <% for snippet in @seemes_snippets %>
+  <tr>
+    <td><%= snippet.title %></td>
+    <td><%= snippet.content[0..50] %></td>
+    <td><%= link_to 'edit', edit_seemes_admin_snippet_path(snippet) %></td>
+  </tr>
+  <% end -%>
+</table>

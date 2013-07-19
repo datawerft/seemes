@@ -1,6 +1,7 @@
 require "seemes/engine"
 
-[ 'seemes/configuration'
+[ 'seemes/configuration',
+  'seemes/view_methods'
 ].each do |path|
   require File.expand_path(path, File.dirname(__FILE__))
 end

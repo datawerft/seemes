@@ -1,0 +1,5 @@
+
+<%= form_for @snippet, url: seemes_admin_snippets_path do |f| %>
+  <%= render partial: 'form_fields', locals: { f: f } %>
+  <%= f.submit :save, :class => 'btn' %>
+<% end %>
